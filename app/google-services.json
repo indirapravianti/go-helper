@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "645427816279",
+    "project_id": "go-tukang-5141a",
+    "storage_bucket": "go-tukang-5141a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645427816279:android:ef59993133c1aa6a338012",
+        "android_client_info": {
+          "package_name": "com.example.gotukang"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "645427816279-vebvj3h3mnbhiuc89krgcfmom52cg0at.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsaXUGt9CgQxZy1tYVwjrHgEdpsWjlidI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "645427816279-vebvj3h3mnbhiuc89krgcfmom52cg0at.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

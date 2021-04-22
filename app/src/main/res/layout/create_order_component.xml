@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tukangNameProfileTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="Tukang Name"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tukangServiceProfileTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tukangNameProfileTextView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:text="Service" />
+
+    <ImageView
+        android:id="@+id/alamatPinImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_location_on_24"
+        app:layout_constraintTop_toBottomOf="@id/tukangServiceProfileTextView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="16dp"/>
+
+    <TextView
+        android:id="@+id/tukangAlamatTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/alamatPinImageView"
+        app:layout_constraintTop_toBottomOf="@id/tukangServiceProfileTextView"
+        android:text="Alamatnya Di Sini"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"/>
+
+    <Button
+        android:id="@+id/followButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tukangAlamatTextView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Follow"/>
+
+    <TextView
+        android:id="@+id/reviewTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/followButton"
+        app:layout_constraintTop_toTopOf="@id/followButton"
+        android:layout_marginLeft="32dp"
+        android:text="Review"/>
+
+    <TextView
+        android:id="@+id/tukangReviewProfileTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/followButton"
+        app:layout_constraintTop_toBottomOf="@id/reviewTitleTextView"
+        android:layout_marginLeft="32dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="0"/>
+
+    <Button
+        android:id="@+id/orderButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/followButton"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Order"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

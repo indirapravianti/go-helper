@@ -7,18 +7,18 @@
     tools:context=".DashboardActivity"
     android:background="@color/white">
 
-<!--    <LinearLayout-->
-<!--        android:id="@+id/progressBarDashboard"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:translationZ="10dp"-->
-<!--        android:background="#B2000000">-->
+    <LinearLayout
+        android:id="@+id/progressBarDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:translationZ="10dp"
+        android:background="#B2000000">
 
-<!--        <ProgressBar-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"/>-->
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 
-<!--    </LinearLayout>-->
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tukangDashboardTitleTextView"
@@ -31,7 +31,7 @@
         android:textSize="32sp"
         android:textStyle="bold"
         android:textColor="#00B761"
-        android:layout_marginTop="14dp"/>
+        android:layout_marginTop="40dp"/>
 
     <SearchView
         android:id="@+id/searchTukang"

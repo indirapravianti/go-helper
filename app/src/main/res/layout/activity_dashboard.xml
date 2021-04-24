@@ -7,37 +7,101 @@
     tools:context=".DashboardActivity"
     android:background="@color/white">
 
-    <LinearLayout
-        android:id="@+id/progressBarDashboard"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:translationZ="10dp"
-        android:background="#B2000000">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/progressBarDashboard"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:translationZ="10dp"-->
+<!--        android:background="#B2000000">-->
 
-        <ProgressBar
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+<!--        <ProgressBar-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"/>-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
     <TextView
         android:id="@+id/tukangDashboardTitleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tukang Dashboard"
+        android:text="go-helper"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:textSize="32sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="#00B761"
         android:layout_marginTop="14dp"/>
+
+    <SearchView
+        android:id="@+id/searchTukang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/search_bg"
+        android:queryHint="Cari disini"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tukangDashboardTitleTextView" />
+
+    <LinearLayout
+        android:id="@+id/llcategories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchTukang">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEAR YOU"
+            android:textColor="#00B761"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#C4C4C4"
+            android:text="POPULAR"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#C4C4C4"
+            android:text="PLUMBER"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#C4C4C4"
+            android:text="GARDENER"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="24dp"/>
+
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/tukangRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tukangDashboardTitleTextView"
-        android:layout_marginTop="14dp"/>
+        app:layout_constraintTop_toBottomOf="@id/llcategories"
+        android:layout_marginTop="32dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

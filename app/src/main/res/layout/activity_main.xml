@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/red_primary">
+    android:background="#fff">
 
     <LinearLayout
         android:id="@+id/progressBar"
@@ -34,9 +34,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@id/guideline"
-        android:text="Login To Your Account"
+        android:text="Login to go-helper"
         android:textStyle="bold"
-        android:textColor="@color/white"
+        android:textColor="#00B761"
         android:textSize="28sp"/>
 
     <EditText
@@ -84,7 +84,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="18dp"
-        android:background="#000"
+        android:background="#00B761"
         android:layout_marginHorizontal="18dp"
         android:text="Login"/>
 
@@ -103,7 +103,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sign Up"
-            android:textColor="@color/white"/>
+            android:textColor="#000"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

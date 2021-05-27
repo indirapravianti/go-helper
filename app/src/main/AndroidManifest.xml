@@ -3,6 +3,7 @@
     package="com.example.gotukang">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GoTukang">
-        <activity android:name=".CheckoutActivity"></activity>
+        <activity android:name=".WebView"></activity>
+        <activity android:name=".CheckoutActivity" />
         <activity android:name=".TukangProfileNewActivity" />
         <activity android:name=".OrderTukangActivity" />
         <activity android:name=".DashboardActivity" />

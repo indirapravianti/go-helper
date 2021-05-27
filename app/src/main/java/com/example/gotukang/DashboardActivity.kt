@@ -4,6 +4,7 @@ import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -47,6 +48,13 @@ class DashboardActivity : AppCompatActivity() {
             }
 
         })
+
+        //FAB for web view
+        fab_webview.setOnClickListener {
+//            Log.d("FAB1", "onCreate: +fab clicked")
+            val intent = Intent(this, WebView::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun tukangClickedListener(tukangItem: TukangListItem) {

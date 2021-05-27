@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Go Tukang</string>
+    <string name="wv_button">web view button</string>
 </resources>

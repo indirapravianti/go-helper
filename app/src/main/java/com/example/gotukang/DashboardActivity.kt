@@ -13,6 +13,7 @@ import com.example.gotukang.models.AddOrderRequest
 import com.example.gotukang.models.TukangList
 import com.example.gotukang.models.TukangListItem
 import com.example.gotukang.networks.RetrofitBuilder
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.messaging.ktx.messaging
 import kotlinx.android.synthetic.main.activity_dashboard.*
@@ -52,6 +53,7 @@ class DashboardActivity : AppCompatActivity() {
         //FAB for web view
         fab_webview.setOnClickListener {
 //            Log.d("FAB1", "onCreate: +fab clicked")
+            Toast.makeText(applicationContext, "Going to Go-Helper Web", Toast.LENGTH_LONG).show()
             val intent = Intent(this, WebView::class.java)
             startActivity(intent)
         }

@@ -11,7 +11,7 @@ class WebView : AppCompatActivity() {
         setContentView(R.layout.activity_web_view)
 
         webView.webViewClient = WebViewClient()
-        webView.loadUrl("https://go-helper.000webhostapp.com/")
+        webView.loadUrl("https://gohelper.tech/")
         webView.settings.javaScriptEnabled = true
         //zoom
         webView.settings.setSupportZoom(true)

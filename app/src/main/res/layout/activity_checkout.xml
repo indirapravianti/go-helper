@@ -21,12 +21,14 @@
             android:layout_marginTop="28dp"
             android:layout_marginBottom="5dp"
             android:layout_marginStart="30dp"
-            android:src="@drawable/ic_back_button"/>
+            app:srcCompat="@drawable/ic_back_button"/>
     </LinearLayout>
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constrainedHeight="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:orientation="vertical">
@@ -68,7 +70,8 @@
                         android:layout_width="76dp"
                         android:layout_height="76dp"
                         android:layout_marginStart="42dp"
-                        android:src="@drawable/ic_person"/>
+                        android:src="@drawable/ic_person"
+                        tools:ignore="VectorDrawableCompat" />
                     <TextView
                         android:id="@+id/tvTukangName"
                         android:layout_width="wrap_content"
@@ -180,7 +183,7 @@
                         android:layout_marginStart="78dp"
                         android:layout_marginEnd="62dp"
                         android:maxLines="1"
-                        android:text="Jalan Baru No. 3, Caturtunggal, Depok, Sleman"
+                        android:text="Pilih Lokasi"
                         android:textSize="13sp"
                         android:textColor="@color/black"
                         android:textStyle="bold"
@@ -193,7 +196,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         android:layout_marginTop="30dp"
                         android:layout_marginEnd="36dp"
-                        android:src="@drawable/ic_navigate_next"/>
+                        app:srcCompat="@drawable/ic_navigate_next"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
                 <LinearLayout
                     android:id="@+id/divider"
@@ -246,7 +249,7 @@
                         android:layout_marginStart="78dp"
                         android:layout_marginEnd="62dp"
                         android:maxLines="1"
-                        android:text="Minggu, 11 April 2021 (Jam 09:00)"
+                        android:text="Pilih jadwal"
                         android:textSize="13sp"
                         android:textColor="@color/black"
                         android:textStyle="bold"
@@ -259,7 +262,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         android:layout_marginTop="13dp"
                         android:layout_marginEnd="36dp"
-                        android:src="@drawable/ic_navigate_next"/>
+                        app:srcCompat="@drawable/ic_navigate_next"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.constraintlayout.widget.ConstraintLayout

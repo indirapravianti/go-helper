@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.GoTukang" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#8f2929</item>
+        <item name="colorPrimary">#00B761</item>
         <item name="colorPrimaryVariant">#a86063</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->

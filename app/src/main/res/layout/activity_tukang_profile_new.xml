@@ -22,7 +22,7 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="28dp"
             android:layout_marginStart="30dp"
-            android:src="@drawable/ic_back_button"/>
+            app:srcCompat="@drawable/ic_back_button"/>
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/ivTukang"
             android:layout_width="147dp"
@@ -32,7 +32,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="60dp"
-            android:src="@drawable/ic_person"/>
+            android:src="@drawable/ic_person"
+            tools:ignore="VectorDrawableCompat" />
         <TextView
             android:id="@+id/tvTukangName"
             android:layout_width="wrap_content"
@@ -67,13 +68,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="11dp"
-                android:src="@drawable/ic_dot"
+                app:srcCompat="@drawable/ic_dot"
                 android:tintMode="add"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:src="@drawable/ic_star"/>
+                app:srcCompat="@drawable/ic_star"/>
             <TextView
                 android:id="@+id/tvRating"
                 android:layout_width="wrap_content"
@@ -86,28 +87,230 @@
                 android:fontFamily="@font/roboto_regular"/>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <TextView
-        android:id="@+id/titleJasa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/guideline"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="23dp"
-        android:layout_marginStart="33dp"
-        android:text="Jasa yang Tersedia"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:fontFamily="@font/roboto_regular"/>
-    <androidx.recyclerview.widget.RecyclerView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/titleJasa"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="25dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginEnd="31dp"/>
+        android:paddingBottom="10dp"
+        app:layout_constrainedHeight="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/titleJasa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="23dp"
+                android:layout_marginStart="33dp"
+                android:text="Jasa Painem"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/roboto_regular"/>
+            <TextView
+                android:id="@+id/tvJasaTukang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/titleJasa"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="23dp"
+                android:layout_marginHorizontal="33dp"
+                android:text="Memotong Pohon"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"/>
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvJasaTukang"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="19dp"
+                android:layout_marginHorizontal="33dp"
+                android:text="Harga: Rp 150.000/hari"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvPrice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="28dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginEnd="77dp"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="20dp"
+                android:backgroundTint="#00B761"
+                app:cornerRadius="40dp"
+                android:text="Pesan jasa ini"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_regular"
+                android:textAllCaps="false"/>
+            <TextView
+                android:id="@+id/titleReview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/btnOrder"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="29dp"
+                android:layout_marginStart="37dp"
+                android:text="Review"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/roboto_regular"/>
+            <TextView
+                android:id="@+id/firstReviewName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/titleReview"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="23dp"
+                android:layout_marginHorizontal="37dp"
+                android:text="Panjul"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"/>
+            <LinearLayout
+                android:id="@+id/firstRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/firstReviewName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="13dp"
+                android:layout_marginHorizontal="37dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_star"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_star"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_star"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_star"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_star"
+                    app:tint="#C4C4C4" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/firstComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/firstRating"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="9dp"
+                android:layout_marginStart="37dp"
+                android:layout_marginEnd="100dp"
+                android:text="Kerjanya bagus, rapi. Akan tetapi pengerjaan lama."
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"/>
+            <TextView
+                android:id="@+id/border"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#D8D8D8"
+                app:layout_constraintTop_toBottomOf="@id/firstComment"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="21dp"
+                android:layout_marginStart="37dp"
+                android:layout_marginEnd="33dp"/>
+            <TextView
+                android:id="@+id/secondReviewName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/border"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="18dp"
+                android:layout_marginHorizontal="37dp"
+                android:text="Panjulina"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"/>
+            <LinearLayout
+                android:id="@+id/secondRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/secondReviewName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="13dp"
+                android:layout_marginHorizontal="37dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_star"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_star"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_star"
+                    app:tint="#C4C4C4"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_star"
+                    app:tint="#C4C4C4"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_star"
+                    app:tint="#C4C4C4" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/secondComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/secondRating"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="9dp"
+                android:layout_marginStart="37dp"
+                android:layout_marginEnd="100dp"
+                android:text="Pohon saya jadi mati. Tolong tanggung jawab!"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"/>
+            <!--<androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/titleJasa"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="33dp"
+                android:layout_marginEnd="31dp"/>-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"

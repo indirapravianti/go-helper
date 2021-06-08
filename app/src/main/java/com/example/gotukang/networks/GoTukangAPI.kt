@@ -1,8 +1,6 @@
 package com.example.gotukang.networks
 
-import com.example.gotukang.models.AddOrderRequest
-import com.example.gotukang.models.TukangList
-import com.example.gotukang.models.UserList
+import com.example.gotukang.models.*
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -14,6 +12,9 @@ interface GoTukangAPI {
 
     @GET("tukang/list")
     fun getTukangList(): Call<TukangList>
+
+    @GET("tukang/find/username")
+    fun getTukangByUsername(@Body findTukangUsernameRequest: FindTukangUsernameRequest): Call<TukangListItem>
 
     @POST("order/add")
     fun addOrderToTukang(@Body orderRequest: AddOrderRequest): Call<List<String>>

@@ -17,7 +17,10 @@ data class TukangListItem(
 	val location: String? = null,
 
 	@field:SerializedName("username")
-	val username: String? = null
+	val username: String? = null,
+
+	@field:SerializedName("price")
+	val price: String? = null
 ) : Parcelable
 
 @Parcelize

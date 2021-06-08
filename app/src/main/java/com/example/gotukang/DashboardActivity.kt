@@ -7,7 +7,9 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.gotukang.adapters.TukangAdapterNew
 import com.example.gotukang.adapters.TukangAdapters
 import com.example.gotukang.models.AddOrderRequest
 import com.example.gotukang.models.TukangList
@@ -32,8 +34,7 @@ class DashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
         username = intent.getStringExtra("EXTRA_USERNAME")
-        val linearLayoutManager = LinearLayoutManager(this)
-        tukangRecyclerView.layoutManager = linearLayoutManager
+        tukangRecyclerView.layoutManager = GridLayoutManager(applicationContext, 2)
 
         RetrofitBuilder().getService().getTukangList().enqueue(object: Callback<TukangList> {
             override fun onFailure(call: Call<TukangList>, t: Throwable) {
@@ -41,9 +42,7 @@ class DashboardActivity : AppCompatActivity() {
             }
 
             override fun onResponse(call: Call<TukangList>, response: Response<TukangList>) {
-                val adapter = TukangAdapters(response.body()?.tukangList) {
-                    tukangClickedListener(it)
-                }
+                val adapter = TukangAdapterNew(username, response.body()?.tukangList)
                 tukangRecyclerView.adapter = adapter
                 progressBarDashboard.visibility = View.GONE
             }

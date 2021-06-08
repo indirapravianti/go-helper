@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         RetrofitBuilder().getService().getUserList().enqueue(object: Callback<UserList> {
             override fun onFailure(call: Call<UserList>, t: Throwable) {
-                Toast.makeText(applicationContext, "Error Network Not Available", Toast.LENGTH_SHORT)
+                Toast.makeText(applicationContext, "Error Network Not Available", Toast.LENGTH_SHORT).show()
             }
 
             override fun onResponse(call: Call<UserList>, response: Response<UserList>) {

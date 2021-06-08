@@ -79,12 +79,9 @@ class CheckoutActivity : AppCompatActivity() {
         btnCheckout.setOnClickListener {
             val time = System.currentTimeMillis()
             val date = Date(time)
-            val complete = SimpleDateFormat("MM/DD/YYYY")
-            val orderRequest = AddOrderRequest(
-                tukangName, tvLocation.text.toString(), username, harga.toString(), complete.format(
-                    date
-                )
-            )
+            val fmt = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+            val dateString = fmt.format(date)
+            val orderRequest = AddOrderRequest(tukangName, tvLocation.text.toString(), username, harga.toString(), dateString)
             RetrofitBuilder().getService().addOrderToTukang(orderRequest).enqueue(object :
                 Callback<List<String>> {
                 override fun onFailure(call: Call<List<String>>, t: Throwable) {
